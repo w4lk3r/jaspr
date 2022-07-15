@@ -1,0 +1,14 @@
+builders:
+  auto_styles:
+    import: "package:auto_styles/builder.dart"
+    builder_factories: [ "buildAutoStyles" ]
+    build_extensions: { ".dart": [ ".css.dart" ] }
+    build_to: source
+    runs_before:
+      - build_web_compilers
+targets:
+  $default:
+    builders:
+      auto_styles:
+        generate_for:
+          - lib/main.dart
