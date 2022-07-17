@@ -1,4 +1,16 @@
+import '../../jaspr.dart';
 import '../framework/framework.dart';
+
+class RenderBuilder extends CustomRenderComponent {
+  const RenderBuilder({
+    required this.renderer,
+  });
+
+  final void Function(DomBuilder) renderer;
+
+  @override
+  void render(DomBuilder b) => renderer(b);
+}
 
 /// Component that has a custom render function
 abstract class CustomRenderComponent extends Component {
