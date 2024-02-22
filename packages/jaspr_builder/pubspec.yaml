@@ -14,10 +14,10 @@ topics:
   - build-runner
 
 dependencies:
-  analyzer: ^5.4.0
+  analyzer: ^6.4.1
   build: ^2.0.0
   collection: ^1.15.0
-  dart_style: ^2.2.3
+  dart_style: ^2.2.4
   glob: ^2.1.1
   jaspr: ^0.10.0
   path: ^1.8.0
