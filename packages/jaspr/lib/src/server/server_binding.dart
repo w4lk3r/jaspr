@@ -25,6 +25,9 @@ class ServerAppBinding extends AppBinding with ComponentsBinding {
   @override
   String get currentUrl => request.url;
 
+  @override
+  String get origin => request.headers[HttpHeaders.refererHeader]?.first ?? '';
+
   late final Map<String, String> cookies = () {
     final Map<String, String> map = {};
     final cookies = request.headers[HttpHeaders.cookieHeader]?.expand((h) => h.split(';')) ?? [];

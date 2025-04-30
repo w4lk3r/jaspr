@@ -30,6 +30,9 @@ class BrowserAppBinding extends AppBinding with ComponentsBinding {
     return pathWithoutOrigin;
   }
 
+  @override
+  String get origin => _baseOrigin;
+
   late String attachTarget;
   late (web.Node, web.Node)? attachBetween;
 

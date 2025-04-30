@@ -14,6 +14,8 @@ abstract class AppBinding with SchedulerBinding {
   /// On the client, this is the currently visited url in the browser.
   String get currentUrl;
 
+  String get origin;
+
   /// The [Element] that is at the root of the hierarchy.
   ///
   /// This is initialized when [runApp] is called.
